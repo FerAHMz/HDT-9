@@ -25,5 +25,18 @@ def RutasOrigen(Grafo, cliente):
     for destino, costo in costos.items():
         print(f"Destino: {destino}, Costo: {costo}, Ruta: {rutas[destino]}")
 
-
+while True:
+    print(f"Estaciones disponibles: {Grafo.nodes()}")
+    cliente=input("Ingrese el nombre de su estacion de salida: ")
+    RutasOrigen(Grafo, cliente)
+    nx.draw(Grafo, with_labels=True)
+    plt.show()
+    print("Desea seguir consultando rutas?")
+    print("1. Si")
+    print("2. No")
+    continuar=input()
+    if continuar=="1":
+        continue
+    else:
+        break
 
