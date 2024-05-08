@@ -20,3 +20,10 @@ def cargarRutas(archivo):
 
 Grafo = cargarRutas("rutas.txt")
 
+def RutasOrigen(Grafo, cliente):
+    rutas, costos = nx.single_source_dijkstra(Grafo, cliente)
+    for destino, costo in costos.items():
+        print(f"Destino: {destino}, Costo: {costo}, Ruta: {rutas[destino]}")
+
+
+
