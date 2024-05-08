@@ -25,6 +25,7 @@ def RutasOrigen(Grafo, cliente):
     for destino, costo in costos.items():
         print(f"Destino: {destino}, Costo: {costo}, Ruta: {rutas[destino]}")
 
+#Ciclo while para que el usuario pueda ingresar las rutas que desee
 while True:
     print(f"Estaciones disponibles: {Grafo.nodes()}")
     cliente=input("Ingrese el nombre de su estacion de salida: ")
